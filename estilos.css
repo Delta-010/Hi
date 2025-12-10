@@ -1,0 +1,101 @@
+body {
+    background-color: #89CFF0;
+}
+
+.ventanainicial{
+    color:deeppink;
+    text-align: center;
+    padding-top: 30%;
+    font-size: 200%;
+}
+
+#botonentrar{
+    margin-top: 40%;
+    font-size: 100%;
+    color: deeppink;
+    background-color:yellowgreen;
+    border-radius: 15%;
+    padding: 20px;
+    box-shadow:  5px 5px 4px rgba(0,0,0,0.1);
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover{
+    transform: scale(1.1);
+}
+
+.ventana2{
+    display: none;
+}
+
+@keyframes fade{
+    from{ opacity: 0; transform: translateY(10px);}
+    to{ opacity: 1; transform: translateY(0);}
+}
+
+.heart-wrap {
+    position: fixed;
+    bottom: -60px;
+    pointer-events: none;     
+    will-change: transform, opacity;
+    animation-name: floatUp;
+    animation-timing-function: cubic-bezier(.2,.7,.2,1);
+    animation-fill-mode: forwards;
+}
+
+.heart {
+    display: inline-block;
+    animation-name: sideWave, spin;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    transform-origin: center;
+    opacity: 0.95;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.12);
+}
+
+@keyframes floatUp {
+    0%   { transform: translateY(0); opacity: 1; }
+    10%  { opacity: 1; }
+    100% { transform: translateY(-160vh); opacity: 0; }
+}
+
+@keyframes sideWave {
+    0%   { transform: translateX(0); }
+    50%  { transform: translateX(var(--drift)); }
+    100% { transform: translateX(0); }
+}
+
+@keyframes spin {
+    0%   { rotate: 0deg; }
+    50%  { rotate: 8deg; }
+    100% { rotate: 0deg; }
+}
+
+#final { display:none; text-align:center; padding-top:4vh; }
+.big-heart { font-size: 120px; animation: fadeIn 1.6s ease-in-out forwards; }
+.final-text { font-size: 2rem; color: deeppink; margin-top: 10px; animation: fadeIn 2s ease-in-out forwards; }
+
+#reiniciar {
+    display:block; 
+    margin-top: 40%;
+    margin: 20px auto; 
+    padding:12px 25px; 
+    font-size: 100%;
+    background-color:yellowgreen; 
+    color:deeppink; 
+    border-radius:15%;
+    border:none; 
+    cursor:pointer; 
+    transition:0.2s; 
+}
+
+#reiniciar:hover{
+    transform: scale(1.05); 
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to   { opacity: 1; transform: scale(1); }
+}
