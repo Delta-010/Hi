@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }, delayMs);
         }
 
-        const esperaFinal = baseDuration + 3600;
+        const esperaFinal = baseDuration;
         setTimeout(() => {
         finalBox.style.display = "block";
         const btn = reiniciarBtn();
@@ -100,4 +100,5 @@ document.addEventListener("DOMContentLoaded", () => {
         lanzarAnimacionCantidad(70);
         }
     });
+
 });
